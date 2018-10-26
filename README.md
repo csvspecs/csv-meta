@@ -1,6 +1,11 @@
 # CSV (Inline) Meta Data Formats
 
 
+[CSV in CSV]() •
+[Attribute-Relation "Classic"]() •
+[Attribute-Relation "Inline"]() •
+[Front Matter in YAML]() •
+
 
 
 
@@ -41,7 +46,7 @@ Note: You can add optional fields as you like to the meta data block.
 
 
 
-## ARFF "Classic"
+## Attribute-Relation "Classic"
 
 Use the ARFF (attribute-relation file format)-like alternative style
 with `%` for comments and `@`-directives
@@ -70,7 +75,7 @@ Staatliches Hofbräuhaus München,          München,   Hofbräu Oktoberfestbier
 ```
 
 
-## ARFF "Inline"
+## Attribute-Relation "Inline"
 
 Use the ARFF (attribute-relation file format)-like alternative style with  `@`-directives
 inside comments (for easier backwards compatibility with old readers)
