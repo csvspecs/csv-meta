@@ -130,6 +130,158 @@ Staatliches Hofbräuhaus München,          München,   Hofbräu Oktoberfestbier
 
 
 
+## Examples
+
+
+### `tree-ops.csv` in Metadata Vocabulary for Tabular Data by W3C
+
+Let's use the example from
+[Metadata Vocabulary for Tabular Data](https://www.w3.org/TR/tabular-metadata/)
+by the World Wide Web Consortium (W3C)
+and compare CSV meta data formats.
+
+
+`tree-ops.csv`:
+
+```
+GID,On Street,Species,Trim Cycle,Inventory Date
+1,ADDISON AV,Celtis australis,Large Tree Routine Prune,10/18/2010
+2,EMERSON ST,Liquidambar styraciflua,Large Tree Routine Prune,6/2/2010
+```
+
+and the meta data recommended (proposed) by the W3C:
+
+`tree-ops.csv-metadata.json`:
+
+``` json
+{
+  "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
+  "url": "tree-ops.csv",
+  "dc:title": "Tree Operations",
+  "dcat:keyword": ["tree", "street", "maintenance"],
+  "dc:publisher": {
+    "schema:name": "Example Municipality",
+    "schema:url": {"@id": "http://example.org"}
+  },
+  "dc:license": {"@id": "http://opendefinition.org/licenses/cc-by/"},
+  "dc:modified": {"@value": "2010-12-31", "@type": "xsd:date"},
+  "tableSchema": {
+    "columns": [{
+      "name": "GID",
+      "titles": ["GID", "Generic Identifier"],
+      "dc:description": "An identifier for the operation on a tree.",
+      "datatype": "string",
+      "required": true
+    }, {
+      "name": "on_street",
+      "titles": "On Street",
+      "dc:description": "The street that the tree is on.",
+      "datatype": "string"
+    }, {
+      "name": "species",
+      "titles": "Species",
+      "dc:description": "The species of the tree.",
+      "datatype": "string"
+    }, {
+      "name": "trim_cycle",
+      "titles": "Trim Cycle",
+      "dc:description": "The operation performed on the tree.",
+      "datatype": "string"
+    }, {
+      "name": "inventory_date",
+      "titles": "Inventory Date",
+      "dc:description": "The date of the operation that was performed.",
+      "datatype": {"base": "date", "format": "M/d/yyyy"}
+    }],
+    "primaryKey": "GID",
+    "aboutUrl": "#gid-{GID}"
+  }
+}
+```
+
+That's obviously not for humans but for machines.
+
+
+Let's start with a CSV in CSV meta data version:
+
+
+```
+######################################
+# title:     Tree Operations
+# keyword:   tree, street, maintenance
+# publisher: Example Municipality
+# license:   CC BY
+# update:    2010-12-31
+
+Name,            Type,    Required,  Primary, Format,   Titles,                   Description
+GID,             string,  true,      true,            , GID | Generic Identifier, An identifier for the operation on a tree.  
+on_street,       string,      ,          ,            , On Street,                The street that the tree is on.       
+species,         string,      ,          ,            , Species,                  The species of the tree.
+trim_cycle,      string,      ,          ,            , Trim Cycle,               The operation performed on the tree. 
+inventory_date,  date,        ,          ,    M/d/yyyy, Inventory Date,           The date of the operation that was performed.
+
+
+GID, On Street,  Species,                 Trim Cycle,               Inventory Date
+1,   ADDISON AV, Celtis australis,        Large Tree Routine Prune, 10/18/2010
+2,   EMERSON ST, Liquidambar styraciflua, Large Tree Routine Prune, 6/2/2010
+```
+
+
+Or how about a version with front matter in YAML:
+
+```
+---
+######################################
+# title:     Tree Operations
+# keyword:   tree, street, maintenance
+# publisher: Example Municipality
+# license:   CC BY
+# update:    2010-12-31
+
+fields:
+- name:     GID
+  type:     string
+  required: true     
+  primary:  true            
+  titles:   [GID, Generic Identifier]
+  description: An identifier for the operation on a tree.  
+
+- name:     on_street
+  type:     string
+  titles:   [On Street]
+  description: The street that the tree is on.       
+
+- name:     species
+  type:     string
+  titles:   [Species]                  
+  description: The species of the tree.
+
+- name:      trim_cycle
+  type:      string      
+  titles:    [Trim Cycle]
+  description: The operation performed on the tree. 
+
+- name:      inventory_date
+  type:      date
+  format:    M/d/yyyy
+  titles:    [Inventory Date]
+  description:  The date of the operation that was performed.
+---
+
+GID, On Street,  Species,                 Trim Cycle,               Inventory Date
+1,   ADDISON AV, Celtis australis,        Large Tree Routine Prune, 10/18/2010
+2,   EMERSON ST, Liquidambar styraciflua, Large Tree Routine Prune, 6/2/2010
+```
+
+
+
+
+
+
+
+
+
+
 ## License
 
 The CSV Meta formats are dedicated to the public domain.
