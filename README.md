@@ -23,11 +23,11 @@ Example:
 # try with some comments
 #   and blank lines even header
 
-Col, Name
-1,   Brewery
-2,   City
-3,   Name
-4,   Abv
+Name,    Type
+Brewery
+City
+Name
+Abv,     Float
 
 
 Andechser Klosterbrauerei,Andechs,Doppelbock Dunkel,7%
@@ -39,7 +39,8 @@ Hacker-Pschorr Bräu,                      München,   Münchner Dunkel,  5.0%
 Staatliches Hofbräuhaus München,          München,   Hofbräu Oktoberfestbier, 6.3%
 ```
 
-Note: You can add optional fields as you like to the meta data block.
+Note: If you don't speficy a data type (the default is String).
+You can add optional fields as you like to the meta data block.
 
 
 
