@@ -21,7 +21,7 @@ Example:
 ```
 ##########################
 # try with some comments
-#   and blank lines even header
+#   and blank lines even before header
 
 Name,    Type
 Brewery
