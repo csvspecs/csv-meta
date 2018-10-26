@@ -227,6 +227,38 @@ GID, On Street,  Species,                 Trim Cycle,               Inventory Da
 ```
 
 
+Or lets use two meta data blocks (for easier reading):
+
+```
+######################################
+# title:     Tree Operations
+# keyword:   tree, street, maintenance
+# publisher: Example Municipality
+# license:   CC BY
+# update:    2010-12-31
+
+Name,            Type,    Required,  Primary, Format   
+GID,             string,  true,      true              
+on_street,       string                    
+species,         string            
+trim_cycle,      string
+inventory_date,  date,    ,          , M/d/yyyy
+
+Name,            Titles,                   Description
+GID,             GID | Generic Identifier, An identifier for the operation on a tree. 
+on_street,       On Street,                The street that the tree is on.
+species,         Species,                  The species of the tree.
+trim_cycle,      Trim Cycle,               The operation performed on the tree. 
+inventory_date,  Inventory Date,           The date of the operation that was performed.
+
+GID, On Street,  Species,                 Trim Cycle,               Inventory Date
+1,   ADDISON AV, Celtis australis,        Large Tree Routine Prune, 10/18/2010
+2,   EMERSON ST, Liquidambar styraciflua, Large Tree Routine Prune, 6/2/2010
+```
+
+Voila! It's starting to get readable.
+
+
 Or how about a version with front matter in YAML:
 
 ```
