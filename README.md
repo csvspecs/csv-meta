@@ -61,7 +61,7 @@ for "meta data" in the header (before any records):
 @ATTRIBUTE Brewery
 @ATTRIBUTE City
 @ATTRIBUTE Name
-@ATTRIBUTE Abv
+@ATTRIBUTE Abv  Float
 
 @DATA
 Andechser Klosterbrauerei,Andechs,Doppelbock Dunkel,7%
@@ -90,7 +90,7 @@ for "meta data" in the header (before any records):
 # @ATTRIBUTE Brewery
 # @ATTRIBUTE City
 # @ATTRIBUTE Name
-# @ATTRIBUTE Abv
+# @ATTRIBUTE Abv  Float
 
 Andechser Klosterbrauerei,Andechs,Doppelbock Dunkel,7%
 Augustiner Bräu München,München,Edelstoff,5.6%
@@ -118,6 +118,7 @@ fields:
 - name: City
 - name: Name
 - name: Abv
+  type: Float
 ---
 
 Andechser Klosterbrauerei,Andechs,Doppelbock Dunkel,7%
