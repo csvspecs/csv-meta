@@ -135,13 +135,11 @@ Staatliches Hofbräuhaus München,          München,   Hofbräu Oktoberfestbier
 
 ### `tree-ops.csv` in Metadata Vocabulary for Tabular Data by W3C
 
-Let's use the example from
+Let's use the Tree Operations example from
 [Metadata Vocabulary for Tabular Data](https://www.w3.org/TR/tabular-metadata/)
 by the World Wide Web Consortium (W3C)
 and compare CSV meta data formats.
-
-
-`tree-ops.csv`:
+The tabular data in `tree-ops.csv`:
 
 ```
 GID,On Street,Species,Trim Cycle,Inventory Date
@@ -149,7 +147,7 @@ GID,On Street,Species,Trim Cycle,Inventory Date
 2,EMERSON ST,Liquidambar styraciflua,Large Tree Routine Prune,6/2/2010
 ```
 
-and the meta data recommended (proposed) by the W3C:
+And the meta data recommended (proposed) by the W3C in its own (external) file:
 
 `tree-ops.csv-metadata.json`:
 
@@ -199,11 +197,11 @@ and the meta data recommended (proposed) by the W3C:
 }
 ```
 
-That's obviously not for humans but for machines.
+
+That's obviously not for humans to read but for machines to process.
 
 
-Let's start with a CSV in CSV meta data version:
-
+Let's start with a CSV in CSV (inline) meta data version:
 
 ```
 ######################################
