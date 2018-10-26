@@ -1,12 +1,10 @@
 # CSV (Inline) Meta Data Formats
 
 
-[CSV in CSV]() •
-[Attribute-Relation "Classic"]() •
-[Attribute-Relation "Inline"]() •
-[Front Matter in YAML]() •
-
-
+[CSV in CSV](#csv-in-csv) •
+[Attribute-Relation "Classic"](#attribute-relation-classic) •
+[Attribute-Relation "Inline"](#attribute-relation-inline) •
+[Front Matter in YAML](#front-matter-in-yaml) •
 
 
 ## CSV in CSV
