@@ -39,7 +39,7 @@ Hacker-Pschorr Bräu,                      München,   Münchner Dunkel,  5.0%
 Staatliches Hofbräuhaus München,          München,   Hofbräu Oktoberfestbier, 6.3%
 ```
 
-Note: If you don't speficy a data type (the default is String).
+Note: If you don't specify a data type (the default is String).
 You can add optional fields as you like to the meta data block.
 
 
